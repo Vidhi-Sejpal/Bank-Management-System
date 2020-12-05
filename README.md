@@ -27,10 +27,13 @@ The Bank Management System is an application for maintaining a person's account 
 ## Steps for Using this System:
    * First you have to select a sender's name from the list
    * Add receiver name from the list to whom you want to transfer the money
-   * Add your account number
+   * Add receiver's account number
    * Add the amount to be transferred
    * Click on the Transfer Money Button<br>
-  An alert will be noftifed as <b>"Transfer Successfull!!"</b> once the money is credited
+  An alert will be noftifed as <b>"Transfer Successfull!!"</b> once the money is credited:
+  
+  If you enter a wrong account number then again an alert will be notified as :
+  
 
 
 
