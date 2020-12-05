@@ -7,11 +7,12 @@ The Bank Management System is an application for maintaining a person's account 
   * Check the balance list 
 
 ## Home Page
-<p align='center'>
- <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Transfer%20Page.png' alt=''> 
-</p>
 
 ## Transfer Money Page
+<p align='center'>
+ <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Transfer%20Page.png' alt='' height="500"> 
+</p>
+
 ## Balance List
 
 ## Steps for Using this System:
