@@ -81,7 +81,7 @@ def transfer():
         sender = User_Transfer_List.query.filter_by(username= sender_name).first()
         receiver = User_Transfer_List.query.filter_by(username= receiver_name).first()
 
-        if sender.bank_id == account_no:
+        if receiver.bank_id == account_no:
 
             sender.balance = float(sender.balance - amount)
             receiver.balance = float(receiver.balance + amount)
@@ -92,8 +92,11 @@ def transfer():
             all_users = User_Transfer_List.query.all()
             db.session.commit()
 
-            flash(f"Transaction Sucessfull !!  Your Account Number {account_no} has been credited by Rs {amount} to {receiver_name }")
-            
+            flash(f"Transaction Sucessfull !!  Your Account Number {sender.bank_id} has been credited by Rs {amount} to {receiver_name }")
+        
+            return redirect(request.url)
+        else :
+            flash('Account Number entered is incorrect.Please try again!')
             return redirect(request.url)
         
 
