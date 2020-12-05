@@ -2,7 +2,7 @@
 Using Flask and SQLAlchemy
 
 ## Project Name
-> Code file 
+> Deployed at Heroku [here](https://banking-system-vidhi.herokuapp.com) 
 1. Akshit
 2. Vidhi
 * Akshit
