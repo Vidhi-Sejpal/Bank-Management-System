@@ -5,3 +5,4 @@ Using Flask and SQLAlchemy
 > Code file 
 1. Akshit
 2. Vidhi
+* Akshit
