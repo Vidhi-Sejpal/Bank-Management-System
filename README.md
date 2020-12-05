@@ -32,14 +32,14 @@ The Bank Management System is an application for maintaining a person's account 
    * Click on the Transfer Money Button<br>
    
    
-  An alert will be noftifed as <b>"Transfer Successfull!!"</b> once the money is credited:
+  * An alert will be noftifed as <b>"Transfer Successfull!!"</b> once the money is credited:
   
    <p align='center'>
       <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Alert for success.png' alt=''> 
    </p>
    
   
-  If you enter a wrong account number then again an alert will be notified as :
+  * If you enter a <b>Wrong Account Number</b> then again an alert will be notified as :
   
   <p align='center'>
      <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Alert for error.png' alt=''> 
