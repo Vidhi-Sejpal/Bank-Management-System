@@ -9,7 +9,7 @@ The Bank Management System is an application for maintaining a person's account 
 ### Home Page
 
 <p align='center'>
- <img src='static/Home Page.png' alt='' height="500"> 
+ <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Home Page.png' alt='' height="500"> 
 </p>
 
 ### Transfer Money Page
@@ -21,7 +21,7 @@ The Bank Management System is an application for maintaining a person's account 
 ### Balance List
 
 <p align='center'>
- <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/%20Page.png' alt='' height="500"> 
+ <img src='https://github.com/Vidhi-Sejpal/Bank-Management-System/blob/main/static/Balance List.png' alt='' height="500"> 
 </p>
 
 ## Steps for Using this System:
