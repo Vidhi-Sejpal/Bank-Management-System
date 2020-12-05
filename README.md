@@ -6,9 +6,13 @@ The Bank Management System is an application for maintaining a person's account 
   * Transfer money through a database and HTML forms.
   * Check the balance list 
 
-## Steps for Using this System
-
-1.Home Page
+## Steps for Using this System:
+   * First you have to select a sender's name from the list
+   * Add receiver name from the list to whom you want to transfer the money
+   * Add your account number
+   * Add the amount to be transferred
+   * Click on the Transfer Money Button
+  An alert will be noftifed as ##### "Transfer Successfull!!" once the money is credited
 
 
 
