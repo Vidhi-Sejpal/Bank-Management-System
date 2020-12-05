@@ -6,6 +6,12 @@ The Bank Management System is an application for maintaining a person's account 
   * Transfer money through a database and HTML forms.
   * Check the balance list 
 
+# Steps for Using this System
+
+1.Home Page
+
+
+
 
 ### Deployed at [Heroku](https://banking-system-vidhi.herokuapp.com) 
 
