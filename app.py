@@ -92,7 +92,7 @@ def transfer():
             all_users = User_Transfer_List.query.all()
             db.session.commit()
 
-            flash(f"Transaction Sucessfull!.Your account has been credited by Rs {amount} to {receiver_name }")
+            flash(f"Transaction Sucessfull !!  Your Account Number {account_no} has been credited by Rs {amount} to {receiver_name }")
             
             return redirect(request.url)
         
