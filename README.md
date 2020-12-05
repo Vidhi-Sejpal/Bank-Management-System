@@ -13,6 +13,6 @@ The Bank Management System is an application for maintaining a person's account 
 > Technologies Used
 
 
-Front-End : HTML,CSS and Bootstrap<br>
-Back-End : FLask<br>
-Database : Flask SQLAlchemy
+  Front-End : HTML,CSS and Bootstrap<br>
+  Back-End : FLask<br>
+  Database : Flask SQLAlchemy
