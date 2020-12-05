@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% set active_page = "transferlist" %}
+{% block content %}
+  <!--==========================Table Section============================-->
+<section id="transfer-list">
+  <div class="container table-responsive py-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="heading text-center">Transfer Balance List</h1>
+      </div>
+      <div class="box col-md-12">
+        <table class="table table-bordered table-striped" >
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Account No</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in all_users %}
+              <tr>
+                <td scope="row">{{ i.id }}</th>
+                <td class="p-3">{{ i.username }}</td>
+                <td class="p-3">{{ i.bank_id }}</td>
+                <td class="p-3">{{ i.balance }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}
+  

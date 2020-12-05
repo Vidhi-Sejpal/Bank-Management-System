@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Basic Bank Management System</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Bootstrap CSS File -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+  <!-- Main Stylesheet File -->
+  <link  rel="stylesheet"  href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <!--========================== Navbar============================-->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+      <a class="navbar-brand" href="{{url_for('index')}}">Bank Management System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item {{ 'active' if active_page == 'index' else '' }}">
+            <a class="nav-link" href="{{url_for('index')}}">Home 
+            <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item {{ 'active' if active_page == 'transfer' else '' }}">
+            <a class="nav-link" href="{{url_for('transfer')}}">Transfer Money</a>
+          </li>
+          <li class="nav-item {{ 'active' if active_page == 'transferlist' else '' }}">
+            <a class="nav-link" href="{{url_for('transferlist')}}">Transfer List</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!-- #navbar -->
+
+ 
+{% block content %}
+
+
+{% endblock %}
+
+  <!--========================== Footer============================-->
+  <footer id="footer" class="section-bg">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>2020</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="">Vidhi Sejpal</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+ 
+  <!-- JavaScript Libraries -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+
+</body>
+</html>

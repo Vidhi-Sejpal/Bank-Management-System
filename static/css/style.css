@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+body {
+  background: #fff;
+ 
+}
+
+a {
+  transition: 0.5s;
+  
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #0a98c0;
+  outline: none;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.navbar-brand
+{
+  font-family: 'Comic Neue', cursive;
+  font-size: 22px;
+}
+
+.nav-item .nav-link
+{
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+
+}
+.nav-item .nav-link:hover
+{
+  color: #0a98c0 !important;
+}
+/*--------------------------------------------------------------
+# Intro Section
+--------------------------------------------------------------*/
+
+#intro {
+  width: 100%;
+  height: 100vh;
+  background: #f5f8fd url("../img/vidhi.jpeg") center top no-repeat;
+  background-size: cover;
+}
+
+#intro .intro-info h2 {
+  color: #413e66;
+  margin-top:150px;
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Merienda One', cursive;
+}
+
+#intro .intro-info h2 span {
+  color: #1bb1dc;
+}
+
+/*--------------------------------------------------------------
+# Transfer List
+--------------------------------------------------------------*/
+
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  overflow: hidden;
+}
+table th {
+  background-color: #0a98c0;
+  text-align: center;
+}
+.heading
+{
+  font-family: 'Merienda One', cursive;
+  color: #0a98c0;
+  font-weight: 100;
+}
+.table
+{
+  text-align: center;
+}
+
+.box
+{
+  margin: 30px 0px 0px 0px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+  padding: 0 0 30px 0;
+  font-size: 14px;
+  background: #e3f2fd;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px ;
+  padding-bottom: 30px;
+  color: #535074;
+  font-size: 15px;
+
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 4px;
+  color: #8582a8;
+}
+
+#footer .credits a {
+  color: #1bb1dc;
+}
+
+#footer .credits a:hover {
+  color: #0a98c0;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+
+@media (min-width: 992px) {
+  #intro .intro-info {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro {
+    width: 100%;
+  }
+
+  #intro .container {
+    height: auto !important;
+  }
+
+  #intro .intro-info {
+    padding:10px 30px;
+  }
+
+  #intro .intro-info h2 {
+    font-size: 32px;
+  }
+  table th
+    {
+      font-size: 13.5px;
+ 
+    }
+  table td
+    {
+      font-size: 12px;
+    }
+  .btn-block
+  {
+    margin-bottom: 15px;
+  }
+}
