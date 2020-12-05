@@ -6,11 +6,13 @@ The Bank Management System is an application for maintaining a person's account 
   * Transfer money through a database and HTML forms.
   * Check the balance list 
 
-## Project Name
+
 ### Deployed at [Heroku](https://banking-system-vidhi.herokuapp.com) 
-1. Akshit
-2. Vidhi
+
+
 > Technologies Used
-Front-End : HTML,CSS and Bootstrap
-Back-End : FLask
+
+
+Front-End : HTML,CSS and Bootstrap<br>
+Back-End : FLask<br>
 Database : Flask SQLAlchemy
