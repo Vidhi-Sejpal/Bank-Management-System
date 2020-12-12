@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect,flash
 from flask_sqlalchemy import SQLAlchemy
-# from flask_migrate import Migrate
+
 
 app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
@@ -11,12 +11,6 @@ app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-
-# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/database_api"
-
-
-# db = SQLAlchemy(app)
-# migrate = Migrate(app, db)
 
 class User_Transfer_List(db.Model):
 
