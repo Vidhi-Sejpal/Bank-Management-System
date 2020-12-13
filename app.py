@@ -28,16 +28,16 @@ class User_Transfer_List(db.Model):
         return(f"{self.id} | {self.username} | {self.bank_id} | {self.balance}")
 
 def create_one_time_entry():
-    user_1 = User_Transfer_List('Rhea Shah',3654327790,50000)
-    user_2 = User_Transfer_List('Sanya Shah',3654327791,50000)
-    user_3 = User_Transfer_List('Akshit Tayade',3654327792,50000)
-    user_4 = User_Transfer_List('Tisha Sejpal',3654327793,50000)
-    user_5 = User_Transfer_List('Manvi Nathwani',3654327794,50000)
-    user_6 = User_Transfer_List('Jay Jain',3654327795,50000)
-    user_7 = User_Transfer_List('Darshan Shah',3654327796,50000)
-    user_8 = User_Transfer_List('Saroj Sejpal',3654327797,50000)
-    user_9 = User_Transfer_List('Pratibha Tayade',3654327798,50000)
-    user_10 = User_Transfer_List('Prachi Sejpal',3654327799,50000)
+    user_1 = User_Transfer_List('Rhea Shah',3651,50000)
+    user_2 = User_Transfer_List('Sanya Shah',3652,50000)
+    user_3 = User_Transfer_List('Akshit Tayade',3653,50000)
+    user_4 = User_Transfer_List('Tisha Sejpal',3654,50000)
+    user_5 = User_Transfer_List('Manvi Nathwani',3655,50000)
+    user_6 = User_Transfer_List('Jay Jain',3656,50000)
+    user_7 = User_Transfer_List('Darshan Shah',3657,50000)
+    user_8 = User_Transfer_List('Saroj Sejpal',3658,50000)
+    user_9 = User_Transfer_List('Pratibha Tayade',3659,50000)
+    user_10 = User_Transfer_List('Prachi Sejpal',3650,50000)
 
     db.session.add_all([user_1,user_2,user_3,user_4,user_5,user_6,user_7,user_8,user_9,user_10])
 
