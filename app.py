@@ -45,8 +45,8 @@ def create_one_time_entry():
 
 def update_entry(sender_name, receiver_name, bank_id, amount):
 
-    sender_name = User_Transfer_List.order_by(username= sender_name).first()
-    receiver_name = User_Transfer_List.order_by(username= receiver_name).first()
+    sender_name = User_Transfer_List.order_by(desc(username= sender_name).first())
+    receiver_name = User_Transfer_List.order_by(desc(username= receiver_name).first())
     #sender_name = User_Transfer_List.query.filter_by(username= sender_name).first()
     #receiver_name = User_Transfer_List.query.filter_by(username= receiver_name).first()
 
