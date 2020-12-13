@@ -12,4 +12,3 @@ Flask-WTF==0.14.2
 Jinja2==2.11.2
 SQLAlchemy==1.2.6
 SQLAlchemy-Utils==0.33.2
-psycopg2==2.7.5

@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request, url_for, redirect,flash
 from flask_sqlalchemy import SQLAlchemy
-import os
 
 app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
 
 # save the .sqlite3 file
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
 app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
+
 db = SQLAlchemy(app)
+
 
 class User_Transfer_List(db.Model):
 
@@ -55,6 +56,7 @@ def update_entry(sender_name, receiver_name, bank_id, amount):
 
         db.session.add_all([sender_name, receiver_name])
         db.session.commit()
+
 
 @app.route('/')
 def index():
@@ -103,6 +105,7 @@ def transfer():
 
 
 if __name__ == "__main__" :
+    
     # db.create_all()
     # create_one_time_entry()
     app.run(debug = True)
