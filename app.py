@@ -6,8 +6,8 @@ app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
 
 # save the .sqlite3 file
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
