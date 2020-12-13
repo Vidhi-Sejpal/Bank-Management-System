@@ -27,9 +27,6 @@ class User_Transfer_List(db.Model):
     def __repr__(self):  
         return(f"{self.id} | {self.username} | {self.bank_id} | {self.balance}")
 
-def create_tables():
-    db.create_all()
-
 def create_one_time_entry():
     user_1 = User_Transfer_List('Rhea Shah',3654327790,50000)
     user_2 = User_Transfer_List('Sanya Shah',3654327791,50000)
