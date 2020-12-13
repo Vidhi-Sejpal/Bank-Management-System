@@ -1,16 +1,14 @@
 from flask import Flask, render_template, request, url_for, redirect,flash
 from flask_sqlalchemy import SQLAlchemy
-
+import os
 
 app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
 
 # save the .sqlite3 file
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
-
 
 class User_Transfer_List(db.Model):
 
@@ -26,7 +24,7 @@ class User_Transfer_List(db.Model):
         self.bank_id = bank_id
         self.balance = balance
 
-    def __repr__(self):
+    def __repr__(self):  
         return(f"{self.id} | {self.username} | {self.bank_id} | {self.balance}")
 
 def create_one_time_entry():
@@ -58,12 +56,11 @@ def update_entry(sender_name, receiver_name, bank_id, amount):
         db.session.add_all([sender_name, receiver_name])
         db.session.commit()
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/transferlist')
+@app.route('/transferlist' , methods = ['GET', 'POST'])
 def transferlist():
     all_users = User_Transfer_List.query.all()
     
@@ -95,8 +92,8 @@ def transfer():
             db.session.commit()
 
             flash(f"Transaction Sucessfull !!  Your Account Number {sender.bank_id} has been credited by Rs {amount} to {receiver_name }")
-        
             return redirect(request.url)
+
         else :
             flash('Account Number entered is incorrect.Please try again!')
             return redirect(request.url)
@@ -106,7 +103,6 @@ def transfer():
 
 
 if __name__ == "__main__" :
-    
-    #db.create_all()
-    #create_one_time_entry()
+    # db.create_all()
+    # create_one_time_entry()
     app.run(debug = True)
