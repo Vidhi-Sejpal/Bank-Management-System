@@ -89,7 +89,7 @@ def transfer():
             db.session.add_all([sender, receiver])
             db.session.commit()
 
-            all_users = User_Transfer_List.query.all()
+            order_list = User_Transfer_List.query.all()
             db.session.commit()
 
             flash(f"Transaction Sucessfull !!  Your Account Number {sender.bank_id} has been credited by Rs {amount} to {receiver_name }")
