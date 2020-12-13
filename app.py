@@ -1,22 +1,21 @@
 from flask import Flask, render_template, request, url_for, redirect,flash
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
 
 # save the .sqlite3 file
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
-
 
 class User_Transfer_List(db.Model):
 
     __tablename__ = 'User_Transfer_List'
 
     id = db.Column(db.Integer, primary_key=True) # for numbers use Integer
-    username = db.Column(db.Text)    # for text use Text
+    username = db.Column(db.String(50))    # for text use Text
     bank_id = db.Column(db.Integer)
     balance = db.Column(db.Float)
 
@@ -56,7 +55,6 @@ def update_entry(sender_name, receiver_name, bank_id, amount):
 
         db.session.add_all([sender_name, receiver_name])
         db.session.commit()
-
 
 @app.route('/')
 def index():
@@ -105,7 +103,6 @@ def transfer():
 
 
 if __name__ == "__main__" :
-    
     # db.create_all()
-    # create_one_time_entry()
+    create_one_time_entry()
     app.run(debug = True)
