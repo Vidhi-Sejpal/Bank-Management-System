@@ -6,7 +6,8 @@ app = Flask(__name__,template_folder='templates',static_folder = 'static')
 app.secret_key = 'vidhis'
 
 # save the .sqlite3 file
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+'database.sqlite'
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHMEY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -45,10 +46,8 @@ def create_one_time_entry():
 
 def update_entry(sender_name, receiver_name, bank_id, amount):
 
-    sender_name = User_Transfer_List.order_by(desc(username= sender_name).first())
-    receiver_name = User_Transfer_List.order_by(desc(username= receiver_name).first())
-    #sender_name = User_Transfer_List.query.filter_by(username= sender_name).first()
-    #receiver_name = User_Transfer_List.query.filter_by(username= receiver_name).first()
+    sender_name = User_Transfer_List.query.filter_by(username= sender_name).first()
+    receiver_name = User_Transfer_List.query.filter_by(username= receiver_name).first()
 
     if sender_name.bank_id == bank_id:
 
