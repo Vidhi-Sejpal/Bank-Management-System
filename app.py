@@ -63,7 +63,7 @@ def index():
 
 @app.route('/transferlist' , methods = ['GET', 'POST'])
 def transferlist():
-    all_users = User_Transfer_List.query.all()
+    # all_users = User_Transfer_List.query.all()
     order_list = User_Transfer_List.query.order_by(User_Transfer_List.id).all()
     return render_template('transferlist.html', order_list = order_list)
 
@@ -89,7 +89,7 @@ def transfer():
             db.session.add_all([sender, receiver])
             db.session.commit()
 
-            order_list = User_Transfer_List.query.all()
+            # order_list = User_Transfer_List.query.all()
             db.session.commit()
 
             flash(f"Transaction Sucessfull !!  Your Account Number {sender.bank_id} has been credited by Rs {amount} to {receiver_name }")
