@@ -50,7 +50,7 @@ The Bank Management System is an application for maintaining a person's account 
 
 
 
-### Deployed at [Heroku](https://banking-system-vidhi.herokuapp.com) 
+### Deployed at [Heroku](https://bank-system-vidhi.herokuapp.com) 
 
 
 > Technologies Used
